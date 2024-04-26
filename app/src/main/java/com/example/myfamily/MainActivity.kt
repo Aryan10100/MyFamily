@@ -18,37 +18,60 @@ class MainActivity : AppCompatActivity() {
 
                                                                              //setting the onClickListener for the Bottom Navigation Bar
         val BottomBar = findViewById<BottomNavigationView>(R.id.bottom_nav)
-        BottomBar.setOnItemSelectedListener() { menuItem->
+        BottomBar.setOnItemSelectedListener() { menuItem->                   //The menuItem-> is Named as( it ) by default
 
-          if (menuItem.itemId==R.id.nav_guard){                             ///if statement confirms that onclicking on guard button only it opens the GuardFragment
-                                                                            ///id of bottom nav item is from res->menu->bottom_bar_items
+            when (menuItem.itemId) {
+                R.id.nav_guard -> {                             //if statement confirms that onclicking on guard button only it opens the GuardFragment
+                    //id of bottom nav item is from res->menu->bottom_bar_items
 
-              inflateFragment()               //we can use inflateFragment(GuardFragment.newInstance())                               //function to inflate the fragments
+                    inflateFragment()               //we can use inflateFragment(GuardFragment.newInstance())                               //function to inflate the fragments
 
-          }else if(menuItem.itemId==R.id.nav_home){
+                }
+                R.id.nav_home -> {
 
-              inflateFragmentHome()          //we can use inflateFragment(HomeScreenFragment.newInstance())
+                    inflateFragmentHome()          //we can use inflateFragment(HomeScreenFragment.newInstance())
 
-          }
+                }
+                R.id.nav_dashboard -> {
+
+                    inflateFragmentDashBoard()
+
+                }
+                R.id.nav_profile -> {
+                    inflateFragmentProfile()
+                }
+            }
 
 
 
 
-            true                                       ///tells the item which we have clicked is to be selected or not
+            true                                       //tells the item which we have clicked is to be selected or not
         }
 
+      BottomBar.selectedItemId=R.id.nav_home     //Using this will Automatically Select HomeScreenFragment as App opens
+    }
 
+    private fun inflateFragmentProfile() {
+        val transaction = supportFragmentManager.beginTransaction()           //represents how function transaction AKA click krne pe Profilefragment hi open ho
+        transaction.replace(R.id.container,ProfileFragment.newInstance())  //And rewrite it as  transaction.replace(R.id.container,newInstance())
+        transaction.commit()
+    }
+
+    private fun inflateFragmentDashBoard() {
+        val transaction = supportFragmentManager.beginTransaction()           //represents how function transaction AKA click krne pe DashBoardfragment hi open ho
+        transaction.replace(R.id.container,DashBoardFragment.newInstance())  //And rewrite it as  transaction.replace(R.id.container,newInstance())
+        transaction.commit()
     }
 
     private fun inflateFragmentHome() {          //inflateFragment(newInstance : Fragment)
-        val transaction = supportFragmentManager.beginTransaction()           ///represents how function transaction AKA click krne pe HomeScreenfragment hi open ho
+        val transaction = supportFragmentManager.beginTransaction()           //represents how function transaction AKA click krne pe HomeScreenfragment hi open ho
         transaction.replace(R.id.container,HomeScreenFragment.newInstance())  //And rewrite it as  transaction.replace(R.id.container,newInstance())
         transaction.commit()
 
     }
 
     private fun inflateFragment() {   ///inflation function
-       val transaction = supportFragmentManager.beginTransaction()              ///represents how function transaction AKA click krne pe guarfragment hi open ho
+       val transaction = supportFragmentManager.beginTransaction()              //represents how function transaction AKA click krne pe guarfragment hi open ho
         transaction.replace(R.id.container,GuardFragment.newInstance())
         transaction.commit()
     }
