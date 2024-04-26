@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GuardFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pinkCard"
+        app:cardElevation="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        app:cardBackgroundColor="#E91E63"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        tools:layout_editor_absoluteX="-36dp">
+
+
+        <TextView
+            android:id="@+id/tvSos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/sos"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvsosmsg"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/in_case_of_emergency_situation_connect_me_to_family_members"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/sosimage"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:elevation="70dp"
+        app:srcCompat="@drawable/help"
+        tools:layout_editor_absoluteX="303dp"
+        tools:layout_editor_absoluteY="98dp"
+        app:layout_constraintEnd_toEndOf="@id/pinkCard"
+        app:layout_constraintTop_toTopOf="@id/pinkCard"
+        app:layout_constraintBottom_toBottomOf="@id/pinkCard"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/greenCard"
+        app:cardElevation="65dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="12dp"
+        app:cardBackgroundColor="@color/lightgreen600"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pinkCard"
+        app:layout_constraintVertical_bias="0.087">
+
+        <TextView
+            android:id="@+id/tvguard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12sp"
+            android:layout_marginTop="15sp"
+            android:text="@string/guard"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvguardmsg"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:text="@string/incase_of_emergency_connnect_to_the_police"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/guardimage"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:elevation="70dp"
+        app:layout_constraintBottom_toBottomOf="@id/greenCard"
+        app:layout_constraintRight_toRightOf="@id/greenCard"
+        app:layout_constraintTop_toTopOf="@id/greenCard"
+        app:srcCompat="@drawable/policeman" />
+
+    <TextView
+        android:id="@+id/tvSecurity"
+        android:layout_width="118dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/security"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/pinkCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

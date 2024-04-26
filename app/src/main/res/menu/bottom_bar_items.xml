@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/home"
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24">
+    </item>
+
+    <item android:title="@string/dashboard"
+        android:id="@+id/nav_dashboard"
+        android:icon="@drawable/baseline_space_dashboard_24">
+    </item>
+
+    <item android:title="@string/guard_bottomNAV"
+        android:id="@+id/nav_guard"
+        android:icon="@drawable/baseline_add_moderator_24">
+    </item>
+
+    <item android:title="@string/profile"
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/baseline_account_circle_24">
+    </item>
+
+</menu>
