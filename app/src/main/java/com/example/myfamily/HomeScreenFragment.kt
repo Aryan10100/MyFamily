@@ -30,18 +30,18 @@ class HomeScreenFragment : Fragment() {
     //we have created a dataclass(MemberModel) file which is used to hold the datamenmber of the following code
 
      val listMember = listOf<MemberModel>(
-         MemberModel("Aryan","Hno. 217 A SBI Bank Road ,Kichha,Uttrakhand"),
-         MemberModel("Priya","Rudrpur,UttraKhand"),
-         MemberModel("Sameer","Kichha,UttraKhand"),
-         MemberModel("Rajesh","Haldwani"),
-         MemberModel("Vaani","Delhi"),
-         MemberModel("John Doe"," 1234 Oak Lane, Springfield, IL 62704"),
-         MemberModel("Jane Smith","5678 Pine Street, Madison, WI 53704"),
-         MemberModel("Emily Davis","8765 Birch Boulevard, Denver, CO 80204"),
-         MemberModel("William Brown","William Brown"),
-         MemberModel("Olivia Wilson","5432 Elm Road, Nashville, TN 37204"),
-         MemberModel("James Anderson","6789 Walnut Drive, Seattle, WA 98104"),
-         MemberModel(" Sophia White","3210 Willow Lane, Phoenix, AZ 85004"),
+         MemberModel("Aryan","Hno. 217 A SBI Bank Road ,Kichha,Uttrakhand","22km","40%","Wifi"),
+         MemberModel("Priya","Rudrpur,UttraKhand","12km","70%","4G"),
+         MemberModel("Sameer","Kichha,UttraKhand","100Km","90%","WIFI"),
+         MemberModel("Rajesh","Haldwani","100Km","90%","WIFI"),
+         MemberModel("Vaani","Delhi","100Km","90%","WIFI"),
+         MemberModel("John Doe"," 1234 Oak Lane, Springfield, IL 62704","10Km","93%","4G"),
+         MemberModel("Jane Smith","5678 Pine Street, Madison, WI 53704","1000Km","19%","WIFI"),
+         MemberModel("Emily Davis","8765 Birch Boulevard, Denver, CO 80204","20Km","20%","WIFI"),
+         MemberModel("William Brown","William Brown","120Km","90%","WIFI"),
+         MemberModel("Olivia Wilson","5432 Elm Road, Nashville, TN 37204","1330Km","50%","4G"),
+         MemberModel("James Anderson","6789 Walnut Drive, Seattle, WA 98104","106Km","99%","4G"),
+         MemberModel(" Sophia White","3210 Willow Lane, Phoenix, AZ 85004","100Km","89%","WIFI"),
 
      )
         val adapter =MemberAdapter(listMember)

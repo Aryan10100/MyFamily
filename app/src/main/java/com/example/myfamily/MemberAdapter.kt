@@ -13,9 +13,15 @@ class MemberAdapter(private val listMember: List<MemberModel>) :RecyclerView.Ada
         val Userimage =item.findViewById<ImageView>(R.id.contactView)
         val call  = item.findViewById<ImageView>(R.id.ivcall)
         val locationPin =item.findViewById<ImageView>(R.id.locationicon)
+        val Battery =item.findViewById<ImageView>(R.id.ivBattery)
+        val Distance =item.findViewById<ImageView>(R.id.ivdistanceo)
+        val signal = item.findViewById<ImageView>(R.id.ivwifi)
+        //TextViews
         val Name =item.findViewById<TextView>(R.id.tvName)
         val location = item.findViewById<TextView>(R.id.locationTV)
-
+        val batterypercent=item.findViewById<TextView>(R.id.tvBattery)
+        val Distancetv=item.findViewById<TextView>(R.id.tvdistance)
+        val signaltv=item.findViewById<TextView>(R.id.tvwifi)
     }
     //
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MemberAdapter.ViewHolder {
@@ -26,8 +32,12 @@ class MemberAdapter(private val listMember: List<MemberModel>) :RecyclerView.Ada
 
     override fun onBindViewHolder(holder: MemberAdapter.ViewHolder, position: Int) {
         val item =listMember[position]                                                               //this set the data
-       holder.Name.text=item.name                                                                    //using this we get the data
-        holder.location.text=item.location
+        holder.Name.text=item.name
+        holder.location.text=item.location                                                          //using this we get the data
+        holder.Distancetv.text=item.distance                                                         //holder.Distancetv.text=item.distance
+        holder.batterypercent.text=item.batterypercentage                                            //           |                   |
+                                                                                                 //{ as declared in View Holder}        {as declared in MemberModular.kt}
+         holder.signaltv.text=item.signal
 
 
     }
