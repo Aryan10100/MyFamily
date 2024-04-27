@@ -1,0 +1,40 @@
+*******************************Basic Work Flow of creating the application****************************************************************
+NOTE-: This file is to Recollect Every single concepts i have learned  , for understanding function of kotlin i have mentioned the code itself
+
+-> what we have got
+     1)MainActivity.kt
+     2)activity_main.xml
+-> Steps Involved
+    1)create 4 Blank Fragments for
+                                  1.1)HomeScreenFragment
+                                  1.2)DashBoardFragment
+                                  1.3)GuardFragment
+                                  1.4)ProfileFragment
+    2) Inside Activity (activity_main.xml)
+                                  2.1)create 2 views
+                                                 2.1.1)BottomNavigation Bar
+                                                              2.1.1.1)Give the height ,Width ,Contraints and id
+                                                              2.1.1.2)write the following code <app:menu="@menu/bottom_bar_items"> and press alt+enter and create another file for defining each_element of Bottom Navigation
+                                                              2.1.1.3) write the following code
+                                                                            <item android:title="@string/home"   =
+                                                                                   android:id="@+id/nav_home"
+                                                                                   android:icon="@drawable/baseline_home_24">  =>>To Create icons we can use R.C(drawable)->new->vector Assets
+                                                                           </item>
+                                                             2.1.1.4)give Item Text color
+
+                                                ----You Are Done Creating the Bottom Bar Navigation----
+                                                2.1.2)create a  CONTAINER to Fit different fragments  BY using Framed layout
+
+                                -----------------You Are Done creating 2 views---------------------------------------------
+    3)Create views for different Fragments
+    4)Inside HomeScreenFragment we will display the contacts so, for this we will create the Recycler View
+                                              4.1)Creating layout for Recycler View
+                                                 4.1.1)create a xml layout file(item_member.xml) and create how a single card view will look like
+                                                 4.1.2)create a Recycler View in Fragment_home_screen.xml
+                                                 4.1.3) To call the (item_member.xml) write following code within Recycler view
+                                                                           tools:listitem="@layout/item_member"
+                                             ----You are done creating layout----
+                                             4.2)create Adapter (creating a layout is creating a skeleton for a Recycler View now to fill it with relevent muscles (data) within the views we use Adapter
+                                                   NOTE : we have learn about fife cycle of Fragment
+                                                    4.2.1)To define the data we need a dataclass To create a dataclass perform Kotlin+java->1st Folder->R.C. ->new kotlin class ->write name select data class(MemberModel)
+                                            ----You Are Done Creating Adapter----

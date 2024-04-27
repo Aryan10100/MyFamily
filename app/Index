@@ -1,0 +1,5 @@
+List View  is not a Optimize way to create list of item .
+problems in list view ,it is good for creating a app with limited data of 50 or 100 but for a lakhs of datalist
+it is not an optimize way , to create lakhs views so , we use Recycler View
+*********************************************************************************************
++Learnings Within the project

@@ -9,7 +9,7 @@
         tools:context=".HomeScreenFragment">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tvMyFamily"
             android:layout_width="118dp"
             android:layout_height="30dp"
             android:layout_marginTop="16dp"
@@ -28,7 +28,7 @@
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/tvMyFamily"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,120 +43,24 @@
             android:layout_marginEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintStart_toEndOf="@+id/tvMyFamily"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/options" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:id="@+id/contactcard1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            android:layout_marginTop="25dp"
-            app:cardCornerRadius="20dp"
-            android:elevation="65dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginRight="12dp">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintTop_toBottomOf="@id/tvMyFamily"
+        tools:listitem="@layout/item_member">
 
-                <ImageView
-                    android:id="@+id/contactView"
-                    android:layout_width="120dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="30dp"
-                    android:elevation="12dp"
-                    android:src="@drawable/mann" />
-
-                <TextView
-                    android:id="@+id/locationTV"
-                    android:layout_width="184dp"
-                    android:layout_height="75dp"
-                    android:layout_marginLeft="160dp"
-                    android:layout_marginTop="45dp"
-                    android:elevation="12dp"
-                    android:text="Location"
-                    android:textSize="18dp"
-                    android:gravity="center"
-                   android:textColor="@color/bluegrey600" />
-
-                <ImageView
-                    android:id="@+id/locationicon"
-                    android:layout_width="30dp"
-                    android:layout_height="25dp"
-                    android:src="@drawable/location"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginLeft="140dp"/>
-
-                <ImageView
-                    android:id="@+id/ivcall"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:elevation="20dp"
-                    android:layout_marginTop="140dp"
-                    android:layout_marginLeft="200dp"
-                    android:src="@drawable/baseline_call_24" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-
-            android:id="@+id/contactcard2"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginLeft="12dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginRight="12dp"
-            android:elevation="65dp"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/contactcard1">
-
-
-                <ImageView
-                    android:id="@+id/contactView2"
-                    android:layout_width="120dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginTop="30dp"
-                    android:elevation="12dp"
-                    android:src="@drawable/man">
-
-                </ImageView>
-
-                <ImageView
-                    android:id="@+id/locationicon2"
-                    android:layout_width="30dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="140dp"
-                    android:layout_marginTop="60dp"
-                    android:src="@drawable/location" />
-
-                <TextView
-                    android:id="@+id/locationTV2"
-                    android:layout_width="184dp"
-                    android:layout_height="75dp"
-                    android:layout_marginLeft="160dp"
-                    android:layout_marginTop="45dp"
-                    android:elevation="12dp"
-                    android:gravity="center"
-                    android:text="Location"
-                    android:textColor="@color/bluegrey600"
-                    android:textSize="18dp" />
-
-                <ImageView
-                    android:id="@+id/ivcall2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="140dp"
-                    android:elevation="20dp"
-                    android:src="@drawable/baseline_call_24" />
-        </androidx.cardview.widget.CardView>
-
+    </androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
